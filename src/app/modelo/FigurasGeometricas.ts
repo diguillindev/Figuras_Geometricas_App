@@ -1,19 +1,12 @@
 export abstract class FiguraGeometrica {
-    nombre: string = "";
-
-    constructor(nombre: string) {
-        this.nombre = nombre;
-    }
+    constructor(public nombre: string) {}
 
     abstract calcularPerimetro(): number;
 } 
 
 export class Circulo extends FiguraGeometrica {
-    radio: number;
-
-    constructor(nombre: string, radio: number) {
+    constructor(nombre: string, public radio: number) {
         super(nombre);
-        this.radio = radio;
     }
 
     calcularPerimetro(): number {
@@ -22,11 +15,8 @@ export class Circulo extends FiguraGeometrica {
 }
 
 export class TrianguloEquilatero extends FiguraGeometrica {
-    lado: number;
-
-    constructor(nombre: string, lado: number) {
+    constructor(nombre: string, public lado: number) {
         super(nombre);
-        this.lado = lado;
     }
 
     calcularPerimetro(): number {
@@ -35,18 +25,12 @@ export class TrianguloEquilatero extends FiguraGeometrica {
 }
 
 export class TrianguloEscaleno extends FiguraGeometrica {
-    ladoA: number;
-    ladoB: number;
-    ladoC: number;
-
-    constructor(nombre: string, ladoA: number, ladoB: number, ladoC: number) {
+    constructor(nombre: string, public ladoA: number, public ladoB: number, public ladoC: number) {
         super(nombre);
-        this.ladoA = ladoA;
-        this.ladoB = ladoB;
-        this.ladoC = ladoC;
     }
 
     calcularPerimetro(): number {
         return this.ladoA + this.ladoB + this.ladoC;
     }
 }
+
