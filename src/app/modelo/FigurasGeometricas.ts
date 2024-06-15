@@ -15,12 +15,12 @@ export class Circulo extends FiguraGeometrica {
 }
 
 export class TrianguloEquilatero extends FiguraGeometrica {
-    constructor(nombre: string, public lado: number) {
+    constructor(nombre: string, public ladoA: number) {
         super(nombre);
     }
 
     calcularPerimetro(): number {
-        return 3 * this.lado;
+        return 3 * this.ladoA;
     }
 }
 

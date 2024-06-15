@@ -3,8 +3,13 @@
   <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
 </ion-card-header>
 
-<ion-input label="Radio (cm)" label-placement="floating" fill="solid" placeholder="Enter text"></ion-input>
+<ion-card-content>
+  <ion-item>
+    <ion-label position="floating">Radio (cm)</ion-label>
+    <ion-input type="number" [(ngModel)]="circulo.radio" placeholder="Enter text"></ion-input>
+  </ion-item>
 
-<ion-button>CALCULAR PERIMETRO</ion-button>
+  <ion-button (click)="calcularPerimetro()">CALCULAR PERIMETRO</ion-button>
 
-<p>Perímetro: {{ circulo.calcularPerimetro().toFixed(2) }} unidades</p>
+  <p>Perímetro: {{ perimetro.toFixed(2) }} unidades</p>
+</ion-card-content>
