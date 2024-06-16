@@ -1,28 +1,37 @@
-<ion-card-header>
-  <ion-card-title>Card Title</ion-card-title>
-  <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-</ion-card-header>
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Triangulo</ion-card-subtitle>
+    <ion-card-title>Perímetro</ion-card-title>
+  </ion-card-header>
 
-<ion-item>
+  <ion-card-content>
+    El perímetro de un triángulo es la suma de las longuituddes de sus tres lados.
+    En otras palabras, es la medida total del contorno o borde del triangulo
+
+    <img alt="circulo" src="assets/figurasimg/triangulo.png" />
+
+  </ion-card-content>
+
+</ion-card>
+
+<ion-item class="ion-text-left">
   <ion-label position="floating">Lado A (cm)</ion-label>
   <ion-input type="number" [(ngModel)]="ladoA" placeholder=""></ion-input>
 </ion-item>
+
 <ion-item>
   <ion-label position="floating">Lado B (cm)</ion-label>
   <ion-input type="number" [(ngModel)]="trianguloEscaleno.ladoB" placeholder=""></ion-input>
 </ion-item>
 <ion-item>
+
   <ion-label position="floating">Lado C (cm)</ion-label>
   <ion-input type="number" [(ngModel)]="trianguloEscaleno.ladoC" placeholder=""></ion-input>
+  
+  <ion-button (click)="calcularPerimetros()">CALCULAR PERIMETRO</ion-button>
+  <p>{{ trianguloEquilatero.nombre }}</p>
+  <p>El perímetro es de : {{ perimetroEquilatero.toFixed(2) }} cm</p>
+  <p>{{ trianguloEscaleno.nombre }}</p>
+  
+  <p>El perímetro es de : {{ perimetroEscaleno.toFixed(2) }} cm</p>
 </ion-item>
-
-<ion-button (click)="calcularPerimetros()">CALCULAR PERIMETRO</ion-button>
-
-<div>
-  <p>Nombre: {{ trianguloEquilatero.nombre }}</p>
-  <p>Perímetro: {{ perimetroEquilatero.toFixed(2) }} unidades</p>
-</div>
-<div>
-  <p>Nombre: {{ trianguloEscaleno.nombre }}</p>
-  <p>Perímetro: {{ perimetroEscaleno.toFixed(2) }} unidades</p>
-</div>

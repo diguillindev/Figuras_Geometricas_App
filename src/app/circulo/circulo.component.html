@@ -1,15 +1,26 @@
-<ion-card-header>
-  <ion-card-title>Card Title</ion-card-title>
-  <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-</ion-card-header>
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Círculo</ion-card-subtitle>
+    <ion-card-title>Perímetro</ion-card-title>
+  </ion-card-header>
 
-<ion-card-content>
-  <ion-item>
-    <ion-label position="floating">Radio (cm)</ion-label>
-    <ion-input type="number" [(ngModel)]="circulo.radio" placeholder="Enter text"></ion-input>
-  </ion-item>
+  <ion-card-content>
+    El perímetro de un círculo es la longitud de la línea que forma su borde
 
-  <ion-button (click)="calcularPerimetro()">CALCULAR PERIMETRO</ion-button>
+    <img alt="circulo" src="assets/figurasimg/circulo.png" />
 
-  <p>Perímetro: {{ perimetro.toFixed(2) }} unidades</p>
-</ion-card-content>
+  </ion-card-content>
+
+</ion-card>
+
+<ion-item class="ion-text-left">
+
+  <ion-label position="floating">Radio (cm)</ion-label>
+  <ion-input type="number" [(ngModel)]="circulo.radio" placeholder="Enter text"></ion-input>
+  
+  <ion-button (click)="calcularPerimetro()">CALCULAR
+    PERIMETRO
+  </ion-button>
+  <p>El prímetro es: {{ perimetro.toFixed(2) }} cm</p>
+
+</ion-item>

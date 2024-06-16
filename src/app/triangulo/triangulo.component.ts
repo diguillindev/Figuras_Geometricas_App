@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TrianguloEquilatero, TrianguloEscaleno } from '../modelo/FigurasGeometricas';
-import { IonCardHeader, IonCardTitle, IonCardSubtitle, IonInput, IonButton, IonLabel, IonItem } from "@ionic/angular/standalone";
+import { IonCardHeader, IonCardTitle, IonCardSubtitle, IonInput, IonButton, IonLabel, IonItem, IonCard, IonCardContent } from "@ionic/angular/standalone";
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './triangulo.component.html',
   styleUrls: ['./triangulo.component.scss'],
   standalone: true,
-  imports: [IonInput, IonButton, IonCardSubtitle, IonCardTitle, IonCardHeader, IonLabel, IonItem, FormsModule]
+  imports: [IonCardContent, IonCard, IonInput, IonButton, IonCardSubtitle, IonCardTitle, IonCardHeader, IonLabel, IonItem, FormsModule]
 })
 export class TrianguloComponent implements OnInit {
   trianguloEquilatero: TrianguloEquilatero;
